@@ -6,17 +6,20 @@
     padding: 0px;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
     background-color: white;
     font-family: 'Roboto', sans-serif;
-}
-
-.wrapper {
-  max-width: 940px;
-  margin: 0 auto;
+    font-size: 1.6rem;
 }
 
 .menu {
+  max-width: 940px;
+  width: 90%;
+  margin: auto;
   align-items: center;
   margin-top: 36.1px;
   display: flex;
@@ -33,27 +36,34 @@ body {
     color: #111111;
     padding-right: 30px;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
     text-decoration: none;
 }
 
 .chef {
+    margin: auto;
     margin-top: 36px;
-    width: 940px;
+    max-width: 940px;
+    width: 90%;
     height: 366px;
     background: #FBDFDB;
     border-radius: 30px;
 }
 
-.chef img {
+.img-chef {
   float: right;
-  padding-right: 100px;
-  padding-top: 66px;
+  max-width: 216px;
+  width: 100%;
+  max-height: 300px;
+  height: 100%;
+  margin-right: 100px;
+  margin-top: 66px;
 }
 
 .chef h1 {
-    font-size: 32px;
-    line-height: 42px;
+    font-size: 3.2rem;
+    line-height: 4.2rem;
     color: #111111;
     position: absolute;
     margin-top: 117px;
@@ -67,14 +77,20 @@ body {
     position: absolute;
     max-width: 316px;
     opacity: 0.7;
-    font-size: 18px;
+    font-size: 1.8rem;
     color: #000000;
-    line-height: 28px;
+    line-height: 2.8rem;
+}
+
+.most-accessed {
+  max-width: 940px;
+  width: 90%;
+  margin: auto;
 }
 
 .recipes {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
@@ -83,28 +99,32 @@ body {
 }
 
 .most-accessed .text {
-  padding-top: 50px;
-  padding-bottom: 20px;
-  font-size: 20px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 2.0rem;
+  line-height: 3.0rem;
   font-weight: bold;
 }
 
 .most-accessed img {
   border-radius: 15px;
-  width: 300px;
+  max-width: 300px;
+  width: 100%;
   height: 140px;
 }
 
 .most-accessed h3 {
   font-weight: normal;
-  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
   padding-top: 20px;
 }
 
 .most-accessed h5 {
   font-weight: normal;
   color: #777777;
-  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
   padding-top: 5px;
   padding-bottom: 30px;
 }
@@ -116,8 +136,8 @@ body {
 }
 
 .footer p {
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
   padding: 23px;
   color: #999999;
 
@@ -125,62 +145,64 @@ body {
 
 .about {
     margin: 50px auto;
+    max-width: 940px;
+    width: 90%;
 }
 
 .about div h3 {
-    font-size: 24px;
-    line-height: 34px;
+    font-size: 2.4rem;
+    line-height: 3.4rem;
     font-weight: bold;
     color: #111111;
 }
 
 .about div h4 {
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 2.0rem;
+    line-height: 3.0rem;
     font-weight: bold;
     color: #111111;
 }
 
 .about div p {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 18px;
+    margin: 20px auto;
+    font-size: 1.8rem;
     color: #444444;
-    line-height: 28px;
+    line-height: 2.8rem;
 }
 
 /*RECEITAS*/
 
-.recipes-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
+.recipes-page {
+  margin: 56px auto;
+  max-width: 940px;
+  width: 90%;
 }
 
-.recipes-page {
-  padding-top: 56px;
+.recipes-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
 .recipes-page img {
   border-radius: 15px;
-  width: 300px;
+  max-width: 300px;
+  width: 100%;
   height: 140px;
 }
 
 .recipes-page h3 {
   padding-top: 20px;
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
   font-weight: normal;
 }
 
 .recipes-page h5 {
   font-weight: normal;
   color: #777777;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
   padding-top: 5px;
   padding-bottom: 30px;
 }
@@ -210,7 +232,8 @@ body {
 
 .modal .close-modal {
   color: #999999;
-  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
   margin: 0 auto;
   margin-top: 80px;
   display: block;
@@ -239,16 +262,22 @@ body {
 }
 
 .modal .name-recipes {
-  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 3.4rem;
   text-align: center;
   margin-top: 20px;
 }
 
 .modal .author-recipes {
   color: #777;
-  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
   text-align: center;
   margin-top: 5px;
 }
 
-
+@media (max-width: 768px) {
+  html {
+  font-size: 50%;
+  }
+}
