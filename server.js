@@ -10,11 +10,13 @@ server.set("view engine", "njk");
 
 nunjuncks.configure("views", {
   express: server,
+  autoescape: false,
+  noCache: true,
 });
 
 
 server.get("/", function (req, res) {
-  return res.render("initial");
+  return res.render("initial", {items: recipes});
 });
 
 server.get("/about", function (req, res) {

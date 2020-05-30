@@ -14,6 +14,8 @@ body {
     background-color: white;
     font-family: 'Roboto', sans-serif;
     font-size: 1.6rem;
+    width:100vw;
+    overflow-y: overlay;
 }
 
 .menu {
@@ -184,10 +186,12 @@ body {
   gap: 20px;
 }
 
+
+
 .recipes-page img {
   border-radius: 15px;
   max-width: 300px;
-  width: 100%;
+  width: 90%;
   height: 140px;
 }
 
@@ -219,7 +223,8 @@ body {
 
 .modal {
   background-color: #FFFFFF;
-  width: 660px;
+  max-width: 660px;
+  width: 90%;
   position: absolute;
   border-radius: 16px;
   top: 50%;
@@ -281,3 +286,29 @@ body {
   font-size: 50%;
   }
 }
+
+@media (max-width: 468px) {
+  html {
+  font-size: 40%;
+  }
+  .menu a {
+    padding-right: 15px;
+  }
+  .img-chef {
+    max-width: 150px;
+    margin-right: 20px;
+    margin-top: 215px;
+  }
+
+.chef h1 {
+  text-align: center;
+  margin-top: 60px 5px;
+  }
+
+.chef p {
+  text-align: center;
+  width: 90%;
+  margin-top: 95px 5px;
+  }
+}
+

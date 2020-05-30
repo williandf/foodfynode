@@ -8,17 +8,18 @@
 
 
     <section class="recipes-page">
-      {% for item in items %}
+
       <div class="recipes-grid">
+        {% for item in items %}
         <div class="recipes-item" id="{{item.id}}">
           <img src="{{item.image}}" alt="Imagem de {{item.title}}">
           <h3>{{item.title}}</h3>
           <h5>{{item.author}}</h5>
         </div>
-      {% endfor %}
+        {% endfor %}
       </div>
+
     </section>
-</div>
 
   <div class="modal-overlay">
   </div>
@@ -37,4 +38,5 @@
   </div>
 
   <script src="/js/recipes.js"></script>
+
   {% endblock %}
