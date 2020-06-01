@@ -11,8 +11,10 @@
 
       <div class="recipes-grid">
         {% for item in items %}
-        <div class="recipes-item" id="{{item.id}}">
+        <div class="recipes-item" id="{{item.id_recipes}}">
+          <a href="/recipes/{{item.id}}">
           <img src="{{item.image}}" alt="Imagem de {{item.title}}">
+          </a>
           <h3>{{item.title}}</h3>
           <h5>{{item.author}}</h5>
         </div>
@@ -21,10 +23,10 @@
 
     </section>
 
-  <div class="modal-overlay">
+  <!--<div class="modal-overlay">-->
   </div>
 
-  <div class="modal">
+  <!--<div class="modal">
     <div class="modal-content">
       <img src="" alt="&#x1F355">
     </div>
@@ -36,7 +38,6 @@
     </div>
     <p class="close-modal">Fechar Modal</p>
   </div>
-
-  <script src="/js/recipes.js"></script>
+  -->
 
   {% endblock %}

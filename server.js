@@ -27,6 +27,18 @@ server.get("/recipes", function (req, res) {
   return res.render("recipes", {items: recipes});
 });
 
+server.get("/receipts/:id", function (req, res) {
+  const id = req.params.id;
+
+  const recipe = recipes.find(function (recipe){
+    return recipe.id == id
+  })
+  if (!recipe) {
+    return res.send('Receita não encontrada')
+  }
+  return res.render('receipts', {item: id})
+});
+
 server.listen(5000, function() {
   console.log("Server is running")
 });
