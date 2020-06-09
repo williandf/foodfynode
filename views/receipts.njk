@@ -5,16 +5,13 @@
 {% endblock %}
 
 {% block content %}
-    <section class="recipes-page">
+    <section class="receipts-page">
 
-      <div class="recipes-grid">
-
-        <div class="recipes-item" id="{{item.id}}">
-          <img src="{{item.image}}" alt="Imagem de {{item.title}}">
-          <h3>{{item.title}}</h3>
-          <h5>{{item.author}}</h5>
+        <div class="receipts-item" id="{{recipe.id}}">
+          <img src="{{recipe.image}}" alt="Imagem de {{recipe.title}}">
+          <h3>{{recipe.title}}</h3>
+          <h5>{{recipe.author}}</h5>
         </div>
-      </div>
 
     </section>
 {% endblock %}

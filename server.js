@@ -31,12 +31,14 @@ server.get("/receipts/:id", function (req, res) {
   const id = req.params.id;
 
   const recipe = recipes.find(function (recipe){
-    return recipe.id == id
+    if (recipe.id == id) {
+      return true
+    }
   })
   if (!recipe) {
     return res.send('Receita não encontrada')
   }
-  return res.render('receipts', {item: id})
+  return res.render('receipts', {recipe})
 });
 
 server.listen(5000, function() {
