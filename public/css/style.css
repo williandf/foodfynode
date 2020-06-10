@@ -297,17 +297,60 @@ body {
 }
 
 .receipts-item h3 {
-  font-size: 36px;
+  font-size: 3.6rem;
+  line-height: 4.6rem;
   color: #111111;
   text-align: center;
 }
 
+.receipts-item h4 {
+  font-size: 2.4rem;
+  line-height: 2.3rem;
+  color: #111111;
+}
+
 .receipts-item h5 {
   margin-top: 4px;
-  font-size: 20px;
+  font-size: 2.0rem;
+  line-height: 3.0rem;
   color: #777777;
   text-align: center;
 }
+
+.receipts-item p {
+  font-size: 1.8rem;
+  color: #444444;
+  line-height: 2.8rem;
+}
+
+.show-hide {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.show-hide a {
+  padding-left: 8px;
+}
+
+.receipts-item ul {
+  list-style-position: inside;
+  font-size: 1.8rem;
+  color: #444444;
+  line-height: 2.8rem;
+}
+
+.hide {
+  font-size: 12px;
+  color: #999999;
+}
+
+.text.active {
+  display: none;
+}
+
+
 
 @media (max-width: 768px) {
   html {
@@ -339,4 +382,3 @@ body {
   margin-top: 95px 5px;
   }
 }
-

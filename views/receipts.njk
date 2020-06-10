@@ -1,17 +1,47 @@
 {% extends "layout.njk" %}
 
 {% block head %}
-    <title>Ingredientes {{item.title}} - Foodfy</title>
+    <title>Ingredientes
+        {{item.title}}
+        - Foodfy</title>
 {% endblock %}
 
 {% block content %}
     <section class="receipts-page">
 
-        <div class="receipts-item" id="{{recipe.id}}">
-          <img src="{{recipe.image}}" alt="Imagem de {{recipe.title}}">
-          <h3>{{recipe.title}}</h3>
-          <h5>{{recipe.author}}</h5>
+        <div class="receipts-item">
+
+            <img src="{{recipe.image}}" alt="Imagem de {{recipe.title}}">
+            <h3>{{recipe.title}}</h3>
+            <h5>{{recipe.author}}</h5>
+            <div class="show-hide">
+            <h4>Ingredientes</h4>
+            <a class="hide">ESCONDER</a>
+            </div>
+                <ul class="text">
+                    {% for ingredients in recipe.ingredients %}
+                        <li>{{ingredients}}</li>
+                    {% endfor %}
+                </ul>
+            <div class="show-hide">
+            <h4>Modo de Preparo</h4>
+            <a class="hide">ESCONDER</a>
+            </div>
+            <div class="text">
+                {% for preparation in recipe.preparation %}
+                    <p>{{preparation}}</p>
+                {% endfor %}
+            </div>
+            <div class="show-hide">
+            <h4>Informações Adicionais</h4>
+            <a class="hide">ESCONDER</a>
+            </div>
+            <div class="text">
+                <p>{{recipe.information | striptags(true) | escape | nl2br}}</p>
+            </div>
         </div>
 
     </section>
+
+    <script src="/js/receipts.js"></script>
 {% endblock %}
