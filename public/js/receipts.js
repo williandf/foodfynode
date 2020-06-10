@@ -1,13 +1,22 @@
-const showText = document.querySelector('.text')
-const showHide = document.querySelectorAll('.hide')
+const toggleButton = document.querySelectorAll('.hide');
+const toggleContent = document.querySelectorAll('.text');
 
-for(let show of showHide)
-    show.addEventListener('click', () => {
-        if (show.innerHTML == 'ESCONDER') {
-            showText.classList.add('active')
-            show.innerHTML = 'MOSTRAR'
-        } else {
-            showText.classList.remove('active')
-            show.innerHTML = 'ESCONDER'
-        }
-    })
+for (const button of toggleButton) {
+  button.onclick = function () {
+
+    if (button.innerHTML === 'ESCONDER') {
+      button.innerHTML = 'MOSTRAR';
+      const parent = button.parentElement.parentElement.querySelector(
+        '.text'
+      );
+      parent.classList.add('active');
+    } else {
+      button.innerHTML = 'ESCONDER';
+
+      const parent = button.parentElement.parentElement.querySelector(
+        '.text'
+      );
+      parent.classList.remove('active');
+    }
+  };
+}
