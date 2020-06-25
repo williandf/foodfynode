@@ -13,7 +13,25 @@ function addIngredient() {
   ingredients.appendChild(newField);
 }
 
+
+
+function addPreparation() {
+  const preparations = document.querySelector("#preparations");
+  const fieldContainers = document.querySelectorAll(".preparation");
+
+  const newFields = fieldContainers[fieldContainers.length -1].cloneNode(true);
+
+  if (newFields.children[0].value == "") return false;
+
+  newFields.children[0].value = "";
+  preparations.appendChild(newFields);
+}
+
 document
   .querySelector(".add-ingredient")
   .addEventListener("click", addIngredient);
+
+document
+  .querySelector(".add-preparation")
+  .addEventListener("click", addPreparation);
 

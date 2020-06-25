@@ -323,7 +323,7 @@ body {
   display: inline;
 }
 
-.details button {
+.save {
   background: #6558C3;
   padding: 9px 20px;
   border-radius: 4px;
@@ -332,6 +332,7 @@ body {
   color: #FFFFFF;
   text-align: right;
   float: right;
+  cursor: pointer;
 }
 
 input {
@@ -351,16 +352,20 @@ input {
 
 .item div{
   margin-top: 10px;
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #111111;
   font-weight: bold;
 }
 
-.item div button {
-  font-size: 16px;
+.add-ingredient, .add-preparation {
+  margin-top: 15px;
+  font-size: 1.6rem;
   color: #6558C3;
   text-decoration: none;
+  font-weight: bold;
+  background-color: white;
 }
+
 
 
 

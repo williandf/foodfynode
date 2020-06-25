@@ -30,12 +30,12 @@ routes.get("/receipts/:id", function (req, res) {
   return res.render('receipts', {recipe})
 });
 
-routes.get("/admin", function (req,res) {
-  return res.redirect("admin/recipes");
-});
+routes.get("/admin", recipes.redirect);
 
 routes.get("/admin/recipes", recipes.index);
 
 routes.get("/admin/recipes/create", recipes.create);
+
+routes.post("/admin/recipes", recipes.post);
 
 module.exports = routes;

@@ -5,7 +5,7 @@
             type="url"
             name="image_url"
             placeholder=""
-            value="{{ instructor.avatar_url }}">
+            value="{{ recipes.image_url }}">
         </div>
       </div>
 
@@ -17,7 +17,7 @@
             type="text"
             name="ingredients[]"
             placeholder="Ingredient"
-            value="{{ instructor.name }}">
+            value="{{ recipes.ingredients }}">
           </div>
         </div>
       </div>
@@ -25,13 +25,13 @@
 
       <div class="item">
         <div>Modo de preparo</div>
-        <div id="preparations">
-          <div class="preparation"></div>
+        <div id="preparations[]">
+          <div class="preparation">
           <input
             type="text"
-            name="preparation[]"
-            placeholder="Novo Passo"
-            value="{{instructor.birth}}">
+            name="preparation"
+            placeholder="Preparation"
+            value="{{recipes.preparation}}">
           </div>
         </div>
       </div>
@@ -43,7 +43,7 @@
           <input
             type="text"
             name="information"
-            value="">
+            value="{{recipes.information}}">
         </div>
       </div>
 
